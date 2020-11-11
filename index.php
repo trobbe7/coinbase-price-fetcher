@@ -43,7 +43,7 @@ require_once('./coinbase.php')
   <div class="centered">
     <img src="./assets/eth.png" alt="Logo Ethereum">
     <h2 class="padding"><?php echo $eth_amount_eur, " €";?></h2>
-    <p><?php echo $eth_amount_usd, " €";?></p>
+    <p><?php echo $eth_amount_usd, " $";?></p>
 
     <?php
 // coinbase.php - Display your ETH balance if you have one
