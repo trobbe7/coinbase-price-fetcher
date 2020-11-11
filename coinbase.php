@@ -5,8 +5,8 @@ $ctx = stream_context_create(["http"=>["user_agent"=>"Mozilla/5.0 (Macintosh; In
 $btc_eur = file_get_contents('https://api.coinbase.com/v2/prices/spot?currency=EUR', true, $ctx);
 $btc_eur = json_decode($btc_eur, true);
 $btc_amount_eur = $btc_eur['data']['amount'];
-$btc_balance = $btc_amount_eur * 0;
-$btc_balance = round($btc_balance, 2);
+// $btc_balance = $btc_amount_eur * 0; -- 0 = your amount of BTC
+// $btc_balance = round($btc_balance, 2);
 
 // echo $btc_amount_eur, " €";
 
@@ -19,8 +19,8 @@ $btc_amount_usd = $btc_usd['data']['amount'];
 $eth_eur = file_get_contents('https://api.coinbase.com/v2/prices/ETH-EUR/spot', true, $ctx);
 $eth_eur = json_decode($eth_eur, true);
 $eth_amount_eur = $eth_eur['data']['amount'];
-$eth_balance = $eth_amount_eur * 0.29968586;
-$eth_balance = round($eth_balance, 2);
+// $eth_balance = $eth_amount_eur * 0; -- 0 = your amount of ETH
+// $eth_balance = round($eth_balance, 2);
 
 // echo $eth_amount_eur, " €";
 
