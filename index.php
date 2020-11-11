@@ -20,7 +20,7 @@ require_once('./coinbase.php')
 <div class="split left">
   <div class="centered">
     <img src="./assets/btc.png" alt="Logo Bitcoin">
-    <h2><?php echo $btc_amount_eur, " €";?></h2>
+    <h2 class="padding"><?php echo $btc_amount_eur, " €";?></h2>
     <p><?php echo $btc_amount_usd, " $";?></p>
 
     <?php
