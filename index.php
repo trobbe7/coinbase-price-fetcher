@@ -20,20 +20,18 @@ require_once('./coinbase.php')
 <div class="split left">
   <div class="centered">
     <img src="./assets/btc.png" alt="Logo Bitcoin">
-    <h2><?php echo $btc_amount_eur, " €";?></h2>
+    <h2 class="padding"><?php echo $btc_amount_eur, " €";?></h2>
     <p><?php echo $btc_amount_usd, " $";?></p>
 
     <?php
-// coinbase.php - Display your BTC balance if you have one
+// refer to: coinbase.php
+    if ($btc_balance >= $balance_display) {
+      echo ('<hr />');
+      echo ('<h2>' . $btc_balance . ' € </h2>');
+    }
+    else {
 
-//
-//    if ($btc_balance > 1) {
-//      echo ('<hr />');
-//      echo ('<h2>' . $btc_balance . ' € </h2>');
-//    }
-//    else {
-//
-//    }
+    }
     ?>
 
   </div>
@@ -43,18 +41,17 @@ require_once('./coinbase.php')
   <div class="centered">
     <img src="./assets/eth.png" alt="Logo Ethereum">
     <h2 class="padding"><?php echo $eth_amount_eur, " €";?></h2>
-    <p><?php echo $eth_amount_usd, " €";?></p>
+    <p><?php echo $eth_amount_usd, " $";?></p>
 
     <?php
-// coinbase.php - Display your ETH balance if you have one
+// refer to: coinbase.php
+    if ($eth_balance >= $balance_display) {
+      echo ('<hr />');
+      echo ('<h2>' . $eth_balance . ' € </h2>');
+    }
+    else {
 
-//    if ($eth_balance > 1) {
-//      echo ('<hr />');
-//      echo ('<h2>' . $eth_balance . ' € </h2>');
-//    }
-//    else {
-//
-//    }
+    }
     ?>
 
   </div>
